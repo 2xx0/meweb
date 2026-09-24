@@ -1,6 +1,7 @@
 import vinext from "vinext";
 import { localAdminPlugin } from "./build/local-admin.mjs";
 import { defineConfig } from "vite";
+import { existsSync } from "node:fs";
 import { readExecutionProfile } from "./scripts/execution-profile.mjs";
 import { sites } from "./build/sites-vite-plugin";
 
@@ -15,6 +16,7 @@ const r2: string | null = null;
 // macOS Seatbelt blocks FSEvents, so Codex previews need polling for HMR.
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
 const managedLinux = readExecutionProfile() === "managed-linux";
+const hasLocalSitesManifest = existsSync(new URL("./.openai/hosting.json", import.meta.url));
 
 const localBindingConfig = {
   main: "vinext/server/fetch-handler",
@@ -61,7 +63,7 @@ export default defineConfig(async () => {
     plugins: [
       localAdminPlugin(),
       vinext(),
-      sites({ mockAuth: !managedLinux }),
+      ...(hasLocalSitesManifest ? [sites({ mockAuth: !managedLinux })] : []),
       cloudflare({
         viteEnvironment: { name: "rsc", childEnvironments: ["ssr"] },
         inspectorPort: false,
