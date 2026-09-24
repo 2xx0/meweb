@@ -1,4 +1,4 @@
-import Link from 'next/link';
+const Link = (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => <a {...props}/>;
 import {notFound} from 'next/navigation';
 import {sections,Kind} from '@/content/schema';
 import {entries} from '@/content';
