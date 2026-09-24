@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-24",
+  "published": true,
+  "sample": true,
+  "tags": [
+    "GitHub",
+    "Git"
+  ],
+  "slug": "github",
+  "title": "بعد فيديو GitHub: من وين تبدأ؟",
+  "category": "دليل مصادر",
+  "description": "روابط رسمية لفهم المستودعات، وأول تعديل، وطلبات الدمج.",
+  "paragraphs": [
+    {
+      "text": "إذا الفيديو أعطاك الصورة العامة، هاي المراجع بتساعدك تطبّق بهدوء. ابدأ بمستودع تجريبي ما فيه معلومات خاصة."
+    },
+    {
+      "heading": "مسار بسيط للتجربة",
+      "text": "أنشئ مستودعًا للتعلّم. أضف ملف README يشرح فكرته. أنشئ فرعًا، عدّل الملف، ثم افتح طلب دمج واقرأ الفرق قبل الدمج."
+    },
+    {
+      "heading": "تذكّر الفرق",
+      "text": "المستودع يحتوي ملفات المشروع وتاريخه. الفرع مسار عمل. طلب الدمج مساحة لمراجعة التغيير ومناقشته قبل دمجه."
+    }
+  ],
+  "references": [
+    {
+      "title": "GitHub — Hello World",
+      "url": "https://docs.github.com/en/get-started/start-your-journey/hello-world"
+    },
+    {
+      "title": "GitHub Skills",
+      "url": "https://skills.github.com/"
+    },
+    {
+      "title": "توثيق Git",
+      "url": "https://git-scm.com/doc"
+    }
+  ]
+}

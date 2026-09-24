@@ -1,0 +1,42 @@
+{
+  "date": "2026-09-24",
+  "published": true,
+  "sample": true,
+  "tags": [
+    "JavaScript"
+  ],
+  "slug": "javascript",
+  "title": "لغة صغيرة، وويب ما بيوقف.",
+  "description": "من صفحة نقرأها إلى صفحة نتفاعل معها: أين تدخل JavaScript؟",
+  "category": "لغات البرمجة",
+  "minutes": 4,
+  "paragraphs": [
+    {
+      "text": "صفحة الويب فيها محتوى، وشكل، وسلوك. HTML يصف البنية، وCSS يضبط العرض، وJavaScript تضيف المنطق والتفاعل."
+    },
+    {
+      "heading": "من النقرة إلى النتيجة",
+      "text": "لما تضغط زر وتتغيّر معلومة بدون تحميل الصفحة كاملة، ممكن JavaScript تكون التقطت الحدث وحدّثت الواجهة أو طلبت بيانات من الخادم."
+    },
+    {
+      "code": "const button = document.querySelector(\"button\");\nbutton?.addEventListener(\"click\", () => {\n  button.textContent = \"Done\";\n});"
+    },
+    {
+      "heading": "اللغة مش هي المتصفح",
+      "text": "المتصفح يوفّر واجهات مثل DOM للتعامل مع عناصر الصفحة. JavaScript نفسها فيها القيم والدوال والكائنات. بيئات تشغيل أخرى، مثل Node.js، بتوفّر واجهات مختلفة خارج المتصفح."
+    },
+    {
+      "quote": "افصل بين اللغة، والبيئة اللي بتشغّلها، والأدوات اللي بتبني فوقها."
+    },
+    {
+      "heading": "ابدأ بالفكرة",
+      "text": "قبل ما تتنقّل بين أطر العمل، جرّب تفهم المتغيّرات والدوال والأحداث والعمليات غير المتزامنة. هاي الأفكار بتضل معك حتى لو تغيّرت الأدوات."
+    }
+  ],
+  "references": [
+    {
+      "title": "MDN — دليل JavaScript",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+    }
+  ]
+}

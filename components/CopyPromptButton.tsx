@@ -1,0 +1,3 @@
+'use client';
+import {useState,useRef,useEffect} from 'react';
+export default function CopyPromptButton({text}:{text:string}){const [state,setState]=useState('');const timer=useRef<ReturnType<typeof setTimeout>|null>(null);useEffect(()=>()=>{if(timer.current)clearTimeout(timer.current)},[]);async function copy(){try{await navigator.clipboard.writeText(text);setState('تم النسخ');if(timer.current)clearTimeout(timer.current);timer.current=setTimeout(()=>setState(''),2500)}catch{setState('تعذّر النسخ تلقائيًا. حدّد النص وانسخه يدويًا.')}}return <><button className="copy" onClick={copy}>{state==='تم النسخ'?'تم النسخ ✓':'نسخ البرومبت'}</button><span className="copy-state" role="status" aria-live="polite">{state}</span></>}
