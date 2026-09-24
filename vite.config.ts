@@ -1,14 +1,16 @@
 import vinext from "vinext";
 import { localAdminPlugin } from "./build/local-admin.mjs";
 import { defineConfig } from "vite";
-import hostingConfig from "./.openai/hosting.json";
 import { readExecutionProfile } from "./scripts/execution-profile.mjs";
 import { sites } from "./build/sites-vite-plugin";
 
 const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
   "00000000-0000-4000-8000-000000000000";
 
-const { d1, r2 } = hostingConfig;
+// Cranl builds from GitHub, where the local Sites manifest is intentionally
+// ignored. These bindings remain disabled until hosted storage is connected.
+const d1: string | null = null;
+const r2: string | null = null;
 
 // macOS Seatbelt blocks FSEvents, so Codex previews need polling for HMR.
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
